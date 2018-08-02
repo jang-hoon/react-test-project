@@ -26,7 +26,7 @@ module.exports = {
                     presets: ['es2015', 'react'],
                     plugins: ['react-hot-loader/babel']
                 })],
-                exclude: /mode_modules/
+                exclude: /node_modules/
             }
         ]
     },
