@@ -1,17 +1,15 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import PropTypes from 'prop-types';
-import Counter from './Counter'
 
 const propTypes = {
-
+    number: PropTypes.number
 };
 
 const defaultProps = {
-
+    number: -1
 };
 
-class App extends React.Component {
+class Value extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -19,13 +17,13 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Counter />
+                <h1>{this.props.number}</h1>
             </div>
         );
     }
 }
 
-App.propTypes = propTypes;
-App.defaultProps = defaultProps;
+Value.propTypes = propTypes;
+Value.defaultProps = defaultProps;
 
-export default hot(module)(App);
+export default Value;
